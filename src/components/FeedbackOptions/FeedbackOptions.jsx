@@ -1,33 +1,21 @@
 import PropTypes from 'prop-types';
+import { FeedbackBox, Button } from './FeedbackOptions.styles';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
-  <div
-    style={{
-      display: 'flex',
-      gap: 12,
-      marginBottom: 12,
-    }}
-  >
+  <FeedbackBox>
     {options.map((option, index) => {
       return (
-        <button
+        <Button
           key={index}
           type="button"
           name={option}
           onClick={onLeaveFeedback}
-          style={{
-            borderRadius: 4,
-            borderColor: 'grey',
-            width: 72,
-            backgroundColor: '#fff',
-            cursor: 'pointer',
-          }}
         >
           {option}
-        </button>
+        </Button>
       );
     })}
-  </div>
+  </FeedbackBox>
 );
 
 FeedbackOptions.propTypes = {

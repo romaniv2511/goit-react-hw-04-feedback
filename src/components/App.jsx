@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-
-import './App.css';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Section from './Section/Section';
 import Statistics from './Statistics/Statistics';
 import Notification from './Statistics/Notification';
+import GlobalStyle from './GlobalStyles';
 
 class App extends Component {
   state = {
@@ -37,6 +36,7 @@ class App extends Component {
 
     return (
       <>
+        <GlobalStyle />
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={['Good', 'Neutral', 'Bad']}
